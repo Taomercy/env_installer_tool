@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 RUN apt-get update -y
 RUN apt-get install openssl -y
 RUN apt-get install libssl-dev -y
-apt-get install gcc make -y
+RUN apt-get install gcc make -y
 RUN apt-get install wget -y
 RUN wget https://www.python.org/ftp/python/3.10.8/Python-3.18.8.tgz
 RUN tar -xvf Python-3.10.8.tgz
