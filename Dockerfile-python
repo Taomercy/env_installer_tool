@@ -10,3 +10,4 @@ RUN cd Python-3.10.8
 RUN ./configure  --with-ssl --prefix=/usr/local/python3
 RUN make && make install
 RUN cp ./python /usr/bin/python
+RUN python -m pip install --upgrade --force pip
