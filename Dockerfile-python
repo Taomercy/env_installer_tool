@@ -6,7 +6,7 @@ RUN apt-get install wget -y
 RUN wget https://www.python.org/ftp/python/3.10.8/Python-3.10.8.tgz
 RUN tar -xvf Python-3.10.8.tgz
 RUN mkdir -p /usr/local/python3
-RUN cd Python-3.10.8
+WORKDIR Python-3.10.8
 RUN ./configure  --with-ssl --prefix=/usr/local/python3
 RUN make && make install
 RUN cp ./python /usr/bin/python
