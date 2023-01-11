@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 RUN apt-get update -y
-RUN apt-get install openssl libssl-dev zlib1g-dev libsqlite3-dev libmysqlclient -y
+RUN apt-get install openssl libssl-dev zlib1g-dev libsqlite3-dev libmysqlclient-dev -y
 RUN apt-get install gcc make -y
 RUN apt-get install wget -y
 RUN wget https://www.python.org/ftp/python/3.10.8/Python-3.18.8.tgz
