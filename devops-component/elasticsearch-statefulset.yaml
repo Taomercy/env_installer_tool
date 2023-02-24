@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: elasticsearch
-        image: elasticsearch:7.12.1
+        #image: elasticsearch:7.12.1
+        image: elasticsearch:7.2.0
         imagePullPolicy: IfNotPresent
         resources:
             limits:
