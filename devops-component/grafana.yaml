@@ -46,6 +46,8 @@ spec:
           # If you're only using the API Server proxy, set this value instead:
           # value: /api/v1/namespaces/kube-system/services/monitoring-grafana/proxy
           value: /
+      nodeSelector:
+        k8s-app: grafana
       volumes:
       - name: ca-certificates
         hostPath:
@@ -68,11 +70,10 @@ spec:
   # or through a public IP.
   # type: LoadBalancer
   # You could also use NodePort to expose the service at a randomly-generated port
-  # type: NodePort
+  type: NodePort
   ports:
   - port: 80
     targetPort: 3000
   selector:
     k8s-app: grafana
-  type: NodePort
 

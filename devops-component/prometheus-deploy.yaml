@@ -22,7 +22,7 @@ spec:
       annotations:
         prometheus.io/scrape: 'false'
     spec:
-      nodeName: worker1
+      nodeName: ecs-centos-1
       serviceAccountName: monitor
       containers:
       - name: prometheus
